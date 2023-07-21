@@ -1,0 +1,36 @@
+.title-login{
+    font-family: 'Dancing Script', cursive;
+}
+.title-header-login{
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 5px;
+    margin-bottom: 10px;
+
+
+}
+.form-login-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+
+}
+
+.form-login-box >label>input{
+   height: 30px;
+   margin-left: 20px;
+   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+
+}
+.form-login-box >label{
+    font-family: 'Dancing Script', cursive;
+    font-size: xx-large;
+}
+.new-user-box{
+    text-align: center;
+    margin-top: 10px;
+}
