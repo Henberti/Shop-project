@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css" />
+    <title>admin</title>
+</head>
+<body>
+    <div class="box">
+      
+        <div>
+            <h1>create new itme</h1>
+            <form action="/admin/add_product" method="POST">
+                <label for="title">
+                    <p>title</p>
+                    <input type="txt" name="title" id="title"/>
+                </label>
+                <label for="price">
+                    <p>price</p>
+                    <input type="number" step="0.01" name="price" id="price"/>
+                </label>
+                <label for="img">
+                    <p>image url</p>
+                    <input type="txt" name="img" id="img">
+                </label>
+                <label for="description">
+                    <p>description</p>
+                    <textarea name="description" id="description" cols="30" rows="10"></textarea>
+                </label>
+
+                <button style="display: block;" type="submit">Submit</button>
+            
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
