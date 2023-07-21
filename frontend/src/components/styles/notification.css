@@ -1,0 +1,62 @@
+
+
+.notification{
+   position: fixed;
+   left: 50%;
+   top: 15%;
+   z-index: 100;
+   width: 200px;
+   transform: translate(-50%, -50%);
+   border: solid 1px black;
+   font-family: 'Dancing Script', cursive;
+   text-align: center;
+   color: white;
+   
+   animation: fadeIn 1s forwards;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        top:5%;
+        background-color: white;
+       
+    }
+    100% {
+        opacity: 1;
+        top: 15%;
+        background-color: green;
+     
+    }
+    
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        top: 15%;
+        background-color: green;
+  
+    }
+    100% {
+        opacity: 0;
+        top: 5%;
+        background-color: white;
+     
+        
+    }
+    
+}
+.notification-hide{
+  
+    position: fixed;
+    left: 50%;
+    top:0%;
+    z-index: 100;
+    width: 200px;
+    transform: translate(-50%, -50%);
+    border: solid 1px black;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    animation: fadeOut 1s forwards;
+    color: white;
+
+}
