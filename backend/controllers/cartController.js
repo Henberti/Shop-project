@@ -115,3 +115,52 @@ exports.updateQuantity = async (req, res) => {
 
     res.status(200).json({ success: 'Product quantity updated successfully' });
 }
+
+
+
+exports.menualChangeQuantity =async (req,res)=>{
+    const cartId = req.body.cart;
+    const _productId = req.body.product;
+    const quantity = req.body.quantity;
+
+    console.log(cartId,_productId,quantity)
+
+    const cart = await Cart.findById(cartId);
+    if(!cart)
+        return res.status(400).json({ error: 'Cart not found'});
+        console.log(1)
+
+    if (quantity <= 0){
+        cart.items  = cart.items.filter(prod => prod.productId.toString() !== _productId)
+        await cart.save();
+        console.log(2)
+
+ 
+    }
+    else{
+        const product = cart.items.find(prod => prod.productId.toString() === _productId);
+
+        product.quantity = quantity;
+        await cart.save();
+        console.log(3)
+
+    }
+    console.log(4)
+
+
+    res.status(200).json({ success: 'Product quantity updated successfully' });
+
+
+  
+
+    
+
+    
+
+
+    
+    
+
+
+
+}

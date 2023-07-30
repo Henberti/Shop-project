@@ -50,12 +50,31 @@ const Cart = ({finished})=>{
     
     },[])
 
+    const handleChangeQuantity = (productId,price,quantity)=>{
+        console.log(productId)
+        if(!productId)return
+        handleCalculateTotalPrice(price)
+        fetch('/api/cart/menual_update_product_quantity',{
+            method:'PATCH',
+            headers:{
+                'Content-Type':'application/json'
+            },
+            body:JSON.stringify({
+                cart:cartId,
+                product:productId,
+                quantity:quantity
+            })
+        }).then(res=>res.json()).then(res=>getProductsInCart())
+        .catch(err=>console.log(err))
+
+    }
+
     
    
 
     const handleIncOrDec = (productId,is_inc,price)=>{
-        handleCalculateTotalPrice(price)
         if(!productId) return
+        handleCalculateTotalPrice(price)
         fetch('/api/cart/update_product_quantity',{
             method:'PATCH',
             headers:{
@@ -153,7 +172,7 @@ const Cart = ({finished})=>{
             {products.map(prod=>{
                 return (
                 <tr key={prod._id}>
-                    <ProductinList  product={prod} calcutate_price={handleCalculateTotalPrice} handleUpdateQuantity={handleIncOrDec}/>
+                    <ProductinList handleChangeQuantity={handleChangeQuantity}  product={prod} calcutate_price={handleCalculateTotalPrice} handleUpdateQuantity={handleIncOrDec}/>
                 </tr>
                 )
             })}

@@ -50,3 +50,30 @@
     display: flex;
     justify-content: space-between;
 }
+.input-quantity{
+    width: 50px;
+    height: 40px;
+    font-family: cursive;
+    font-size: x-large;
+    border: none;
+
+}
+.input-quantity:focus{
+    outline: none;
+    
+}
+.btn-quantity{
+    background: green;
+    border: none;
+    width: 50px;
+    height: 20px;
+    font-family: cursive;
+    margin-right: 5px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+   
+}
+.btn-quantity:active{
+    scale: 90%;
+    
+}
