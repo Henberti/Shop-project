@@ -17,6 +17,7 @@ const ProductInList = ({product, handleUpdateQuantity, handleChangeQuantity:hand
     useEffect(()=>{
         const _totalPrice = Number((numberPrice*quantity).toFixed(2))
         setToTalPrice(_totalPrice)
+        setQuantityChange(quantity)
         
 
     },[quantity])
@@ -35,6 +36,7 @@ const ProductInList = ({product, handleUpdateQuantity, handleChangeQuantity:hand
 
     const submitNewQuantity = ()=>{
         const calcPrice = (quantityChange-quantity)*numberPrice
+        
         handleQuantityManual(_id,calcPrice,quantityChange)
 
         handleInput()
