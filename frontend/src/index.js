@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import { Provider } from 'react-redux';
 import {store} from './store';
+//Hen Berti 201381407 && Eliran Belaish 207598467
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

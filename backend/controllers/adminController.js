@@ -2,11 +2,11 @@ const Product = require('../module/Product')
 const path = require('path')
 const rootDir = require('../utils/root')
 
-
+//this function is used to get all products from the database
 exports.addProductView = (req,res)=>{
     res.sendFile(path.join(rootDir,'views', 'adminView.html'))
 }
-
+//this function is used to get all products from the database
 exports.addProductToDB = (req,res)=>{
     const title = req.body.title;
     const description = req.body.description;

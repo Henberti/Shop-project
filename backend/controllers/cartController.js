@@ -2,7 +2,7 @@ const { default: mongoose } = require('mongoose')
 const Cart = require('../module/Cart')
 const Product = require('../module/Product')
 
-
+//this function to get all products from cart
 exports.getProductsInCart = (req,res)=>{
     const {cartId} = req.params
 
@@ -11,6 +11,7 @@ exports.getProductsInCart = (req,res)=>{
     .catch(err=>res.status(500).json(err))
 
 }
+//this function will delete the cart
 exports.deleteCart = (req, res) => {
     const {cartId} = req.params;
     
@@ -27,7 +28,7 @@ exports.deleteCart = (req, res) => {
         });
 }
 
-
+//adding to cartt
 exports.addToCart =async (req,res)=>{
     const cartId = req.body.cart
     const _productId = req.body.product
