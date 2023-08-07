@@ -25,7 +25,6 @@ const StoreGrid = ()=>{
           'Content-Type': 'application/json'
         },
       }).then(res=>res.json()).then(res=>{
-        console.log('hello',res)
         setArrayOfProducts(res)
         setMaxSize(res.length)
       })
