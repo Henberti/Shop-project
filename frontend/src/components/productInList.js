@@ -66,7 +66,7 @@ const ProductInList = ({product, handleUpdateQuantity, handleChangeQuantity:hand
                     <input name='quantity' onChange={handleChangeQuantity} value={quantityChange} className="input-quantity" type="number"></input>
                     </div>)
                     :
-                    <p onClick={handleInput} style={{display:'inline', marginLeft:'5px', marginRight:'5px', fontFamily:'cursive', fontSize:'x-large'}}>{quantity}</p>
+                    <p onClick={handleInput} className="p-quantity-change" style={{display:'inline', marginLeft:'5px', marginRight:'5px', fontFamily:'cursive', fontSize:'x-large'}}>{quantity}</p>
                     }
                     <AddRemoveBtn plus={true} onClick={()=>handleUpdateQuantity(_id,true,numberPrice)}/>
                 </tb>

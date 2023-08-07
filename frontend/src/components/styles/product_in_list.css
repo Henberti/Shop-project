@@ -56,8 +56,10 @@
     font-family: cursive;
     font-size: x-large;
     border: none;
+  
 
 }
+
 .input-quantity:focus{
     outline: none;
     
@@ -76,4 +78,13 @@
 .btn-quantity:active{
     scale: 90%;
     
+}
+.p-quantity-change{
+    transition: all 0.4s;
+
+}
+.p-quantity-change:hover{
+    /* box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4); */
+    scale: 120%;
+    text-decoration: underline;
 }
