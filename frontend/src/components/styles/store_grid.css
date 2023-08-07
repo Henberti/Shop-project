@@ -8,11 +8,11 @@
     padding: 10px;
     margin-top: 10%;
     box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.5);
-    display: grid;
+    display: grid ;
     column-gap: 10px;
     row-gap: 20px;
     grid-template-columns: repeat(4, 1fr);
-    overflow: hidden;
+    overflow:scroll;
 
 }
 
@@ -28,6 +28,7 @@
     }
   }
 .extend-bottom {
+  z-index: 1000;
     height: 20px; 
     width: 100%;
     display: flex;

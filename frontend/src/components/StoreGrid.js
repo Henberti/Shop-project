@@ -60,7 +60,7 @@ const StoreGrid = ()=>{
 
     return (
         <div className='store-wrapper'>
-            <div className='store-view-box'>
+            <div className='store-view-box' >
                 {arrayOfProducts.slice((page-1)*8, (page*8)).map(prod=>{
 
                   return (
